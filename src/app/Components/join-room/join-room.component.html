@@ -1,0 +1,8 @@
+<div>
+    <input type="text" [(ngModel)]="roomId" placeholder="Enter Room ID" />
+    <input type="text" [(ngModel)]="userName" placeholder="Enter Your Name" />
+    <button (click)="joinRoom()">Join Room</button>
+  </div>
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>

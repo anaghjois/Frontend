@@ -1,0 +1,70 @@
+.mainLayout {
+  display: flex;
+  height: 100vh;
+}
+
+
+
+.sidebar {
+  background-color: #18181f;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 0.5cm;
+  border-bottom-right-radius: 0.5cm;
+}
+
+.logoDiv {
+  text-align: center;
+  height: 10vh;
+}
+
+.login-item {
+  text-align: justify;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-items {
+  margin: 10% 0 0 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  /* Ensure links don't have underlines */
+  align-items: center;
+  cursor: pointer;
+  /* Vertically center content */
+}
+
+.sidebar-items img.iconImg {
+  width: 15%;
+  margin: 0 10% 0 0;
+}
+
+.sidebar-items.active {
+  font-weight: 800;
+}
+
+
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.iconImg {
+  width: 15%;
+  margin: 0 10% 0 0;
+}
+
+.logoimage {
+  width: 70%;
+}
+
+.active {
+  font-weight: 500;
+}
+

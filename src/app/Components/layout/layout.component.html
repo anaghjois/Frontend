@@ -1,0 +1,31 @@
+<div class="mainLayout">
+    <nav class="sidebar">
+        <div class="logoDiv">
+            <img class="logoimage" src="../../../assets/Images/dummy.png" alt="anagha">
+        </div>
+        <div style="height: 80vh;">
+            <a class="sidebar-items" routerLink="/main/home" routerLinkActive="active">
+                <img class="iconImg" src="../../../assets/Images/home.png" alt="">Home
+            </a>
+            <a class="sidebar-items" routerLink="upcoming-games" routerLinkActive="active">
+                <img class="iconImg" src="../../../assets/Images/cricket.png" alt="">Upcoming Games
+            </a>
+            <a class="sidebar-items" routerLink="/main/auction" routerLinkActive="active">
+                <img class="iconImg" src="../../../assets/Images/auction.png" alt="">Auction
+            </a>
+            <a class="sidebar-items" routerLink="/news" routerLinkActive="active">
+                <img class="iconImg" src="../../../assets/Images/news.png" alt="">News
+            </a>
+        </div>
+        <div class="guest-login" *ngIf="!isUserLoggedIn" style="height: 10vh;">
+            <hr style="color: antiquewhite;">
+            <p class="login-item">
+                <img class="iconImg" src="../../../assets/Images/user.png" alt="">Guest
+            </p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <router-outlet></router-outlet>
+    </main>
+</div>

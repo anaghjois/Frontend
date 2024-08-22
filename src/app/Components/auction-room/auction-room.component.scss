@@ -1,0 +1,30 @@
+.auction-room {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .room-messages {
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .current-bids {
+    margin-bottom: 20px;
+  }
+  
+  .current-bids ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .place-bid {
+    margin-top: 20px;
+  }
+  
+  .place-bid form div {
+    margin-bottom: 10px;
+  }
+  
