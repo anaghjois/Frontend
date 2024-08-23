@@ -20,6 +20,7 @@ export class MainPageComponent {
   constructor(private auctionService: AuctionServiceService, private router: Router,private http:HttpClient) {}
 roomID:any
 roomSize: number = 8; // Default value
+userName: string = 'HostUser';
 createRoom() {
   if (this.roomSize < 2 || this.roomSize > 100) {
     alert('Please enter a valid number between 2 and 100.');
@@ -32,10 +33,19 @@ createRoom() {
     this.roomID = response.roomId;
     // Redirect to the room page
     // this.router.navigate([`/room/${this.roomID}`]);
+    this.joinHost();
   });
 }
 
   joinRoom(){
       this.router.navigate([`/main/join`])
+  }
+
+
+  joinHost() {
+    this.auctionService.joinHost(this.roomID, this.userName).subscribe(() => {
+      // Redirect to the room page after joining
+      this.router.navigate([`/main/room/${this.roomID}/${this.userName}`]);
+    });
   }
 }

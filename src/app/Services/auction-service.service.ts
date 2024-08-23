@@ -50,6 +50,9 @@ export class AuctionServiceService {
     });
   }
 
+  joinHost(roomId: string, userName: string): Observable<void> {
+    return this.http.post<void>(`${this.url}/join-room`, { roomId, userName });
+  }
   placeBid(bid: number, player: string, userName: string): void {
     this.socket.emit('placeBid', { bid, player, userName });
   }
